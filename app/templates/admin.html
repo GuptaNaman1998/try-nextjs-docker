@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-align: center;">{% block title %} Admin Console {% endblock %}</h2>
+<table border="2">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Enrollment Status</th>
+            <th scope="col">Diet Plan Duration</th>
+            <th scope="col">1st Day Plan</th>
+            <th scope="col">2nd Day Plan</th>
+            <th scope="col">3rd Day Plan</th>
+            <th scope="col">4th Day Plan</th>
+            <th scope="col">5th Day Plan</th>
+            <th scope="col">6th Day Plan</th>
+            <th scope="col">7th Day Plan</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+<script>
+    const data = {{ catalog| tojson }};
+    const tableData = data.map(value => {
+        return (
+            `<tr>
+            <td>${value.username}</td>
+            <td>${value.subscription_active}</td>
+            <td>${value.duration}</td>
+            <td>${value.day_1}</td>
+            <td>${value.day_2}</td>
+            <td>${value.day_3}</td>
+            <td>${value.day_4}</td>
+            <td>${value.day_5}</td>
+            <td>${value.day_6}</td>
+            <td>${value.day_7}</td>
+          </tr>`
+        );
+    }).join('');
+
+    const tableBody = document.querySelector("#tableBody");
+    tableBody.innerHTML = tableData;
+</script>
+{% endblock %}

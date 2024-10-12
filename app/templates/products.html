@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="reader" style="text-align: center;">{% block title %} Product Dashboard {% endblock %}</h2>
+<div class="row" id="tableBody">
+
+</div>
+<script>
+  const data = {{ catalog| tojson }};
+  var tableData = ``;
+  const keys = [];
+  for (j = 0; j < data.length; j++) {
+    console.log(data[j]);
+    for (var key in data[j]) {
+      if (key.includes("day_")) {
+        keys.push(key);
+      }
+    }
+    // console.log(keys);
+    for (i = 1; i <= data[j].duration; i++) {
+      console.log(keys[i - 1]);
+      let json_data = data[j][keys[i - 1]];
+      console.log(json_data);
+      tableData = tableData + ` 
+                  <div class="column"> 
+                    <div class="card">
+                        <h1 class="card__face" id="remData">Day ${i}</h1>
+                      <div class="card__face card__face--front"> 
+                        <p><b>Breakfast</b> : ${json_data.Breakfast}</p> 
+                        <p><b>Lunch</b> : ${json_data.Lunch}</p> 
+                        <p><b>Dinner</b> : ${json_data.Dinner}</p> 
+                      </div>
+                    </div> 
+                  </div>`;
+      if (i % 4 == 0) {
+        tableData = tableData + `<div class="row">`;
+      }
+    }
+  }
+
+  // console.log(tableData);
+  const tableBody = document.querySelector("#tableBody");
+  tableBody.innerHTML = tableData;
+
+  var cards = document.querySelectorAll('.card');
+
+  [...cards].forEach((card) => {
+    card.addEventListener('click', function () {
+      card.classList.toggle('is-flipped');
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="reader" style="text-align: center;">{% block title %} User Signup Page {% endblock %}</h2>
+<form class="modal-content" method="post">
+  <div class="container"></div>
+  <label for="username"><b>Username</b></label>
+  <input type="text" name="username" placeholder="Enter Username" value="{{ request.form['username'] }}" required>
+
+  <label for="password"><b>Password</b></label>
+  <input type="password" name="password" placeholder="Enter Password" value="{{ request.form['password'] }}" required>
+
+  <label for="password"><b>Confirm Password</b></label>
+  <input type="password" name="password_cnf" placeholder="Enter Password" value="{{ request.form['password_cnf'] }}"
+    required>
+
+  <button type="submit">Login</button>
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} {% endblock %} - FlaskApp</title>
+  <script src="{{url_for('static', filename='app.js')}}"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
+</head>
+
+<body>
+  <div class="tab" id="nav">
+    <button id="btn1" class="tablinks"
+      onclick="location.href='{{ url_for('login') }}';this.style.background = 'green';">
+      <h2>Login</h2>
+    </button>
+    <button id="btn2" class="tablinks"
+      onclick="location.href='{{ url_for('create_user') }}';this.style.background = 'green';">
+      <h2>Signup</h2>
+    </button>
+    <button id="btn3" class="tablinks"
+      onclick="location.href='{{ url_for('products') }}';this.style.background = 'green';">
+      <h2>Product Dashboard</h2>
+    </button>
+  </div>
+  <hr>
+  <div class="content">
+    {% for message in get_flashed_messages() %}
+    <div class="alert">{{ message }}</div>
+    {% endfor %}
+    {% block content %} {% endblock %}
+  </div>
+</body>
+
+</html>

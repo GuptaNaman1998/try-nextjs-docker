@@ -1,0 +1,9 @@
+# start by pulling the python image
+FROM postgres:latest
+
+# copy the requirements file into the image
+COPY init.sql /docker-entrypoint-initdb.d/
+
+ENV POSTGRES_DB postgres_db
+ENV POSTGRES_USER admin
+ENV POSTGRES_PASSWORD secret

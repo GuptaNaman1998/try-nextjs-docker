@@ -1,0 +1,251 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.tab button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 33%;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #000000;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  /* border: 1px solid #888; */
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+</style>
+</head>
+<body>
+  <div class="tab" id="nav">
+    <button class="tablinks active" onclick="location.href='www.google.com';"><h2>Login</h2></button>
+    <button class="tablinks" onclick="location.href='www.google.com';"><h2>Signup</h2></button>
+    <button class="tablinks" onclick="location.href='www.google.com';"><h2>Product Dashboard</h2></button>
+  </div>
+  <hr>
+<div id="id01" class="modal">  
+  <form class="modal-content animate" method="post">
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container">
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("nav");
+  var btns = header.getElementsByClassName("tablinks");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace("active", "");
+    this.className += " active";
+    });
+  }
+</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url("download.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      /* background-size: 100% 100%; */
+    }
+
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px 10px;
+    }
+
+    /* Remove extra left and right margins, due to padding */
+    .row {
+      margin: 0 -5px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Style the counter cards */
+    .card {
+      box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 16px;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      background-color: #f1f1f1;
+      opacity: 0.9;
+    }
+
+    .card.is-flipped {
+      transform: translateX(0%) rotateY(-180deg);
+    }
+
+    .card__face {
+      backface-visibility: hidden;
+    }
+
+    .card__face--front {
+      transform: rotateY(180deg);
+    }
+  </style>
+
+  <div class="row" id="tableBody">
+  </div>
+  <script>
+    const data = [{ username: 'naman', duration: 2, day_1 : { Breakfast: "2 slices sprouted Ezekiel breadTrusted Source with 1/2 avocadoTrusted Source, salt, and pepper. Total carbs: 36.5 g.", Lunch: "3 ounces (oz) (85 g) grilled chickenTrusted Source with 2 cups (340 g) zucchiniTrusted Source noodles made with 1 clove of garlicTrusted Source, butterTrusted Source, and 1 oz (28 g) ParmesanTrusted Source. Total carbs: 17 g.", Dinner: "bunless burgerTrusted Source with a slice of CheddarTrusted Source cheese, served with 1/2 cup (78 g) cooked broccoliTrusted Source and 2 tablespoons (35.7 g) of salsaTrusted Source. Total carbs: 8.5 g.Total carbs for the day: 62 g"} , day_2:  { Breakfast: "2 slices sprouted Ezekiel breadTrusted Source with 1/2 avocadoTrusted Source, salt, and pepper. Total carbs: 36.5 g.", Lunch: "3 ounces (oz) (85 g) grilled chickenTrusted Source with 2 cups (340 g) zucchiniTrusted Source noodles made with 1 clove of garlicTrusted Source, butterTrusted Source, and 1 oz (28 g) ParmesanTrusted Source. Total carbs: 17 g.", Dinner: "bunless burgerTrusted Source with a slice of CheddarTrusted Source cheese, served with 1/2 cup (78 g) cooked broccoliTrusted Source and 2 tablespoons (35.7 g) of salsaTrusted Source. Total carbs: 8.5 g.Total carbs for the day: 62 g"}, day_3:  "None", day_4:  "None", day_5:  "None", day_6:  "None", day_7:  "None" }];
+    var tableData = ``;
+    const keys = [];
+    for (j = 0; j < data.length; j++) {
+      console.log(data[j]);
+      for (var key in data[j]){
+        if(key.includes("day_")){
+          keys.push(key);
+      }
+    }
+    // console.log(keys);
+    for (i = 1; i <= data[j].duration; i++) {
+      console.log(keys[i-1]);
+      let json_data = data[j][keys[i-1]];
+      console.log(json_data);
+      tableData = tableData + ` 
+                  <div class="column"> 
+                    <div class="card">
+                        <h1 class="card__face" id="remData">Day ${i}</h1>
+                      <div class="card__face card__face--front"> 
+                        <p><b>Breakfast</b> : ${json_data.Breakfast}</p> 
+                        <p><b>Lunch</b> : ${json_data.Lunch}</p> 
+                        <p><b>Dinner</b> : ${json_data.Dinner}</p> 
+                      </div>
+                    </div> 
+                  </div>`;
+      if (i % 4 == 0) {
+        tableData = tableData + `<div class="row">`;
+      }
+    }
+  }
+    // console.log(tableData);
+    const tableBody = document.querySelector("#tableBody");
+    tableBody.innerHTML = tableData;
+
+    var cards = document.querySelectorAll('.card');
+
+    [...cards].forEach((card) => {
+      card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+        // let a = document.querySelector("#remData");
+        // var b = ""
+        // if(a.innerHTML.includes("Day ")){
+        //   b = a.textContent;
+        //   a.innerHTML = "";
+        //   console.log(b);
+        //   console.log('prev was b; next will be a from loop 1');
+        //   console.log(a);
+
+        // }
+        // else if(a.innerHTML.includes("")){
+        //   a.textContent = b;
+        //   console.log(b);
+        //   console.log('prev was b; next will be a from loop 2');
+        //   console.log(a);
+        // }
+        
+        // console.log(card.classList)
+      });
+    });
+  </script>
+
+</body>
+
+</html>

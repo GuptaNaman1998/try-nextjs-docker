@@ -1,0 +1,18 @@
+Day 1
+Breakfast: 2 slices sprouted Ezekiel breadTrusted Source with 1/2 avocadoTrusted Source, salt, and pepper. Total carbs: 36.5 g.
+Lunch: 3 ounces (oz) (85 g) grilled chickenTrusted Source with 2 cups (340 g) zucchiniTrusted Source noodles made with 1 clove of garlicTrusted Source, butterTrusted Source, and 1 oz (28 g) ParmesanTrusted Source. Total carbs: 17 g.
+Dinner: bunless burgerTrusted Source with a slice of CheddarTrusted Source cheese, served with 1/2 cup (78 g) cooked broccoliTrusted Source and 2 tablespoons (35.7 g) of salsaTrusted Source. Total carbs: 8.5 g.
+Total carbs for the day: 62 g
+Day 2
+Breakfast: 7 oz (200 g) plain Greek yogurtTrusted Source with 1/4 cup (37 g) blueberriesTrusted Source and 1 oz (28.35 g) almondsTrusted Source. Total carbs: 19.4 g.
+Lunch: 3 oz (85 g) rib eye roastTrusted Source with 1/2 cup (120 g) mashed rutabagaTrusted Source and 1 cup (129 g) sautéed green beansTrusted Source. Total carbs: 13.5 g.
+Dinner: 3 oz (85 g) baked salmonTrusted Source with 1/2 cup (90 g) cooked asparagusTrusted Source and 3/4 cup (85 g) cauliflowerTrusted Source rice. Total carbs: 7.7 g.
+Total carbs for the day: 40.6 g
+Day 3
+Breakfast: breakfast bowl with 2 large hard-boiled eggsTrusted Source, 1 tomatoTrusted Source, and 1 cup cubed avocadoTrusted Source. Total carbs: 19 g.
+Lunch: 2.5 cups (244 g) shrimp garden salad with shrimpTrusted Source, lettuce, eggs, tomato, and carrots, with 2 tablespoons (tbsp), or 30 milliliters (mL), olive oil vinaigretteTrusted Source. Total carbs: 10.5 g.
+Dinner: 3 oz (85 g) grilled chickenTrusted Source with 1/2 cup (78 g) roasted Brussels sproutsTrusted Source and 1/2 cup (93 g) cooked quinoaTrusted Source. Total carbs: 25.2 g.
+Total carbs for the day: 54.7 g
+
+
+day_1 : { Breakfast: "2 slices sprouted Ezekiel breadTrusted Source with 1/2 avocadoTrusted Source, salt, and pepper. Total carbs: 36.5 g.", Lunch: "3 ounces (oz) (85 g) grilled chickenTrusted Source with 2 cups (340 g) zucchiniTrusted Source noodles made with 1 clove of garlicTrusted Source, butterTrusted Source, and 1 oz (28 g) ParmesanTrusted Source. Total carbs: 17 g.", Dinner: "bunless burgerTrusted Source with a slice of CheddarTrusted Source cheese, served with 1/2 cup (78 g) cooked broccoliTrusted Source and 2 tablespoons (35.7 g) of salsaTrusted Source. Total carbs: 8.5 g.Total carbs for the day: 62 g"}
